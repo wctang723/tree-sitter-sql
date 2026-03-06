@@ -62,14 +62,16 @@ export default {
 
   // TODO: optional `keyword_add` is necessary to allow for chained alter statements in t-sql
   // maybe needs refactoring
-    // changing $.column_definition to $.column_definitions
   add_column: $ => seq(
     optional($.keyword_add),
     optional(
       $.keyword_column,
     ),
     optional($._if_not_exists),
-    $.column_definitions,
+    choice(
+        $.column_definition,
+        $.constraint,
+    ),
     optional($.column_position),
   ),
 
