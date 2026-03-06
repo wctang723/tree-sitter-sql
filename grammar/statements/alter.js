@@ -68,7 +68,10 @@ export default {
       $.keyword_column,
     ),
     optional($._if_not_exists),
-    $.column_definition,
+    choice(
+      $.column_definition,
+      $.constraint,
+    ),
     optional($.column_position),
   ),
 
