@@ -64,22 +64,12 @@ export default {
   // maybe needs refactoring
   add_column: $ => seq(
     optional($.keyword_add),
-    optional(
-      $.keyword_column,
-    ),
-    optional($._if_not_exists),
-    choice(
-        $.column_definition,
-        $.constraint,
-    ),
-    optional($.column_position),
-  ),
-
-  add_constraint: $ => seq(
-    $.keyword_add,
-    optional($.keyword_constraint),
-    $.identifier,
-    $.constraint,
+      optional(
+          $.keyword_column
+      ),
+      optional($._if_not_exists),
+      $.column_definition,
+      optional($.column_position),
   ),
 
   drop_constraint: $ => seq(
