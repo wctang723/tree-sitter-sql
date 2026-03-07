@@ -72,6 +72,12 @@ export default {
       optional($.column_position),
   ),
 
+  add_constraint: $ => seq(
+    $.keyword_add,
+    optional($.keyword_constraint),
+    $.constraint,
+  ),
+
   drop_constraint: $ => seq(
     $.keyword_drop,
     $.keyword_constraint,
