@@ -5,7 +5,7 @@ Refer to the original project here: https://github.com/DerekStride/tree-sitter-s
 ## Installation
 Change the install_info if using the nvim-treesitter plugin. 
 
-* Set something like:
+* Set the nvim-treesitter config something like this:
   ```lua
   require('nvim-treesitter.parsers').sql = {
     install_info = {
