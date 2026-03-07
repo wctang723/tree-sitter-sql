@@ -15,5 +15,6 @@ Change the install_info if using the nvim-treesitter plugin.
       generate = false,
       generate_from_json = false,
       -- queries = 'queries',
-  },
+    },
+  }
   ```
